@@ -193,6 +193,10 @@ wrapper.prepend(navWrapper);
 
 const email = localStorage.getItem("email");
 
+if (email) {
+  window.customerEmail = email;
+}
+
 navWrapper.innerHTML = `<header class="transparent has-topbar">
         <div id="topbar">
           <div class="container">

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html><html lang="zxx"><head>
     <title>Almaris — Hotel Website Template</title>
     <link rel="icon" href="images/icon.webp" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
@@ -28,30 +28,6 @@
 
         <!-- header begin -->
         <header class="transparent has-topbar">
-            <div id="topbar">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="d-flex justify-content-between xs-hide">
-                                <div class="header-widget d-flex">                                    
-                                    <div class="topbar-widget"><a href="#"><i class="icofont-location-pin"></i>742 Evergreen Terrace Brooklyn, NY 11201</a></div>
-                                    <div class="topbar-widget"><a href="#"><i class="icofont-phone"></i>+929 333 9296</a></div>
-                                    <div class="topbar-widget"><a href="#"><i class="icofont-envelope"></i>contact@almaris.com</a></div>
-                                </div>
-
-                                <div class="social-icons">
-                                    <a href="#"><i class="fa-brands fa-facebook fa-lg"></i></a>
-                                    <a href="#"><i class="fa-brands fa-x-twitter fa-lg"></i></a>
-                                    <a href="#"><i class="fa-brands fa-youtube fa-lg"></i></a>
-                                    <a href="#"><i class="fa-brands fa-pinterest fa-lg"></i></a>
-                                    <a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -69,7 +45,8 @@
                             </div>
                             <div class="de-flex-col header-col-mid">
                                 <ul id="mainmenu">
-                                    <li><a class="menu-item" href="index.html">Home</a>
+                                    <li>
+                                        <a class="menu-item" href="index.html">Home</a>
                                     </li>
                                     <li><a class="menu-item" href="rooms.html">Rooms</a>
                                         <ul class="mega">
@@ -135,15 +112,6 @@
                                         </ul>
                                     </li>
                                     <li><a class="menu-item" href="reservation.html">Reservation</a></li>
-                                    <li><a class="menu-item" href="#">Pages</a>
-                                        <ul>
-                                            <li><a href="about.html">About Us</a></li>
-                                            <li><a href="facilities.html">Facilities</a></li>
-                                            <li><a href="special-offers.html">Offers</a></li>
-                                            <li><a href="gallery.html">Gallery</a></li>
-                                            <li><a href="gallery-carousel.html">Gallery Carousel</a></li>
-                                        </ul>
-                                    </li>
                                     <li><a class="menu-item" href="news.html">News</a></li>
                                     <li><a class="menu-item" href="contact.html">Contact</a></li>
                                 </ul>
@@ -165,54 +133,156 @@
 
             <div id="top"></div>
 
-            <section class="jarallax pt100 bg-dark text-light relative">
-                <div class="overlay op-7"></div>
-                <img src="images/1.webp" class="jarallax-img" alt="">
-                <div class="container relative z-2">
-                    <div class="row g-3 justify-content-center">
+            <section class="section-dark text-light no-top no-bottom position-relative overflow-hidden z-1000">
+                <div class="v-center">
+                    <div class="swiper">
+                      <!-- Additional required wrapper -->
+                      <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="swiper-inner" data-bgimage="url(images/1.webp)">
+                                <div class="sw-caption z-1000">
+                                    <div class="container">
+                                        <div class="row g-4 align-items-center">
 
-                        <div class="spacer-double xs-hide"></div>
+                                            <div class="spacer-double"></div>
 
-                        <div class="col-xl-10 col-lg-12 relative">
-                            <h1 class="fs-96 fs-sm-10vw mb-0 lh-1 text-uppercase wow fadeInRight">Welcome To</h1>
-                            <div class="abs w-30 end-0 bottom-0 sm-hide wow fadeInRight" data-wow-delay=".2s">
-                                <p>Discover the perfect blend of luxury, comfort, and convenience at Almaris.</p>
+                                            <div class="col-lg-8 offset-lg-2 text-center">     
+                                                <div class="spacer-single"></div>
+                                                <div class="sw-text-wrapper">
+                                                    <div class="slider-extra mb-3">
+                                                        <span class="d-stars">
+                                                            <i class="icofont-star"></i>
+                                                            <i class="icofont-star"></i>
+                                                            <i class="icofont-star"></i>
+                                                            <i class="icofont-star"></i>
+                                                            <i class="icofont-star"></i>
+                                                        </span>
+                                                    </div>
+                                                    <h1 class="slider-title mb-4">Where Every Stay is Extraordinary</h1>
+                                                    <p class="col-lg-8 offset-lg-2 slider-teaser px-4 mb-0">Discover the perfect blend of luxury, comfort, and convenience at Almaris. Nestled in the heart of Brooklyn, our hotel is your gateway to an unforgettable experience.</p>
+                                                    <div class="spacer-30"></div>
+                                                    <a class="btn-main mb10 mb-3" href="rooms.html">Discover Rooms</a>
+                                                </div>
+                                            </div>
+
+                                            <div class="spacer-single"></div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                                <div class="abs abs-centered w-40">
+                                    <div class="box-slider-decor"></div>
+                                </div>
+                                <div class="sw-overlay op-2"></div>
                             </div>
                         </div>
-                        <div class="col-xl-10 col-lg-12 text-end">
-                            <h1 class="fs-96 fs-sm-10vw mb-0 lh-1 text-uppercase wow fadeInLeft" data-wow-delay=".4s">Almaris Hotel</h1>
-                        </div>
-                    </div>
+                        <!-- Slides -->
 
-                    <div class="spacer-double"></div>
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="swiper-inner" data-bgimage="url(images/2.webp)">
+                                <div class="sw-caption z-1000">
+                                    <div class="container">
+                                        <div class="row g-4 align-items-center">
 
-                    <div class="row g-3 gx-4 justify-content-center align-items-center relative">
+                                            <div class="spacer-double"></div>
+
+                                            <div class="col-lg-8 offset-lg-2 text-center">     
+                                                <div class="spacer-single"></div>
+                                                <div class="sw-text-wrapper">
+                                                    <div class="slider-extra mb-3">
+                                                        <span class="d-stars">
+                                                            <i class="icofont-star"></i>
+                                                            <i class="icofont-star"></i>
+                                                            <i class="icofont-star"></i>
+                                                            <i class="icofont-star"></i>
+                                                            <i class="icofont-star"></i>
+                                                        </span>
+                                                    </div>
+                                                    <h1 class="slider-title mb-4">Experience Hospitality Like Never Before</h1>
+                                                    <p class="col-lg-8 offset-lg-2 slider-teaser px-4 mb-0">Discover the perfect blend of luxury, comfort, and convenience at Almaris. Nestled in the heart of Brooklyn, our hotel is your gateway to an unforgettable experience.</p>
+                                                    <div class="spacer-30"></div>
+                                                    <a class="btn-main mb10 mb-3" href="rooms.html">Discover Rooms</a>
+                                                </div>
+                                            </div>
+
+                                            <div class="spacer-single"></div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                                <div class="abs abs-centered w-40">
+                                    <div class="box-slider-decor"></div>
+                                </div>
+                                <div class="sw-overlay op-2"></div>
+                            </div>
+                        </div>                        
+                        <!-- Slides -->
+
+                        <!-- Slides -->
                         
+                        <!-- Slides -->       
 
-                        <div class="col-lg-4">
-                            <div class="wow fadeInLeft" data-wow-delay="1.2s">
-                                <p>Immerse yourself in the epitome of luxury at Almaris, your premier destination in New York. Our hotel redefines elegance and comfort, offering an exquisite escape for discerning travelers.</p>
-                                <a class="btn-main mt-2" href="reservation.html">Book Your Stay</a>
-                            </div>
+                      </div>
+                      <!-- If we need pagination -->
+                      <div class="swiper-pagination"></div>
 
-                            <div class="abs z-2 end-10 abs-middle sm-hide text-center p-4 bg-dark wow scaleIn" data-wow-delay="1.4s">
-                                <div class="fs-15" data-wow-delay=".2s">
-                                <h3 class="fs-48 lh-1-1 mb-0 id-color">120+</h3>
-                                Rooms Available
-                            </div>
-                            </div>
-                        </div>
+                      <!-- If we need navigation buttons -->
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
 
-                        <div class="col-lg-5">
-                            <img src="images/2.webp" class="w-100 rounded-up-100 wow scaleIn" data-wow-delay=".8s" alt="">
-                        </div>
-                        
+                      <!-- If we need scrollbar -->
+                      <div class="swiper-scrollbar"></div>
                     </div>
-
-                    
                 </div>
-
             </section>
+
+            <div class="bg-dark text-light pt30 pb30">
+                <div class="container">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-9">
+                            <div class="row g-4 align-items-center">
+                                <div class="col-md-3 text-lg-start text-center">
+                                    <h3 class="mb-0">Reservation</h3>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="text-center ">
+                                        <h6 class="id-color mb-1">Choose Date</h6>
+                                        <input type="text" id="date-picker" class="form-control no-border no-bg bg-focus-color text-white fs-20 text-right text-center" name="date" value="">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="text-center ">
+                                        <h6 class="id-color">Adult</h6>
+                                        <div class="de-number">
+                                            <span class="d-minus">-</span>
+                                            <input type="text" class="no-border no-bg" value="1">
+                                            <span class="d-plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="text-center ">
+                                        <h6 class="id-color">Children</h6>
+                                        <div class="de-number">
+                                            <span class="d-minus">-</span>
+                                            <input type="text" class="no-border no-bg" value="0">
+                                            <span class="d-plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 text-lg-end text-center">
+                            <a class="btn-main" href="rooms.html">Check Availability</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <section class="relative lines-deco">
                 <div class="container">
@@ -221,7 +291,7 @@
                             <div class="relative wow fadeInUp" data-wow-delay=".3s">   
                                 <div class="abs top-0 w-100">
                                     <div class="shape-mask-1 jarallax">
-                                        <img src="images/6.webp" class="jarallax-img" alt="">
+                                        <img src="images/2.webp" class="jarallax-img" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -252,142 +322,254 @@
                             <div class="relative wow fadeInUp" data-wow-delay=".3s">                                
                                 <div class="abs top-0 w-100">
                                     <div class="shape-mask-1 jarallax">
-                                        <img src="images/5_1.webp" class="jarallax-img" alt="">
+                                        <img src="images/3.webp" class="jarallax-img" alt="">
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="spacer-double"></div>
+
+                    <div class="row g-4 relative z-2">
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                            <div class="relative p-4 bg-white border-grey">
+                                <span class="abs top-= w-70px p-3 rounded-up-100 bg-color d-block">
+                                    <img src="images/restaurant-svgrepo-com.svg" class="w-100" alt="">
+                                </span>
+                                <div class="pl-90">
+                                    <h4>Restaurant</h4>
+                                    <p class="mb-0">Do dolore laboris commodo amet cillum qui voluptate velit occaecat adipisicing laboris est minim.</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                            <div class="relative p-4 bg-white border-grey">
+                                <span class="abs top-= w-70px p-3 rounded-up-100 bg-color d-block">
+                                    <img src="images/swimming-pool-svgrepo-com.svg" class="w-100" alt="">
+                                </span>
+                                <div class="pl-90">
+                                    <h4>Swimming Pool</h4>
+                                    <p class="mb-0">Do dolore laboris commodo amet cillum qui voluptate velit occaecat adipisicing laboris est minim.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                            <div class="relative p-4 bg-white border-grey">
+                                <span class="abs top-= w-70px p-3 rounded-up-100 bg-color d-block">
+                                    <img src="images/fitness-gym-svgrepo-com.svg" class="w-100" alt="">
+                                </span>
+                                <div class="pl-90">
+                                    <h4>Fitness Center</h4>
+                                    <p class="mb-0">Do dolore laboris commodo amet cillum qui voluptate velit occaecat adipisicing laboris est minim.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".6s">
+                            <div class="relative p-4 bg-white border-grey">
+                                <span class="abs top-= w-70px p-3 rounded-up-100 bg-color d-block">
+                                    <img src="images/flower-lotus-thin-svgrepo-com.svg" class="w-100" alt="">
+                                </span>
+                                <div class="pl-90">
+                                    <h4>Spa & Massage</h4>
+                                    <p class="mb-0">Do dolore laboris commodo amet cillum qui voluptate velit occaecat adipisicing laboris est minim.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".7s">
+                            <div class="relative p-4 bg-white border-grey">
+                                <span class="abs top-= w-70px p-3 rounded-up-100 bg-color d-block">
+                                    <img src="images/meeting-explain-svgrepo-com.svg" class="w-100" alt="">
+                                </span>
+                                <div class="pl-90">
+                                    <h4>Meeting Room</h4>
+                                    <p class="mb-0">Do dolore laboris commodo amet cillum qui voluptate velit occaecat adipisicing laboris est minim.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".8s">
+                            <div class="relative p-4 bg-white border-grey">
+                                <span class="abs top-= w-70px p-3 rounded-up-100 bg-color d-block">
+                                    <img src="images/laundry-machine-svgrepo-com.svg" class="w-100" alt="">
+                                </span>
+                                <div class="pl-90">
+                                    <h4>Laundry Service</h4>
+                                    <p class="mb-0">Do dolore laboris commodo amet cillum qui voluptate velit occaecat adipisicing laboris est minim.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
                 </div>
 
             </section>
 
-            <section class="jarallax relative overflow-hidden text-light section-dark pt60 pb60"> 
-                <div class="overlay op-5"></div>               
+            <section class="jarallax relative overflow-hidden text-light section-dark">
+                <div class="abs abs-centered w-30">
+                    <div class="box-slider-decor"></div>
+                </div>
                 <img src="images/1.webp" class="jarallax-img" alt="">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 offset-lg-2 text-center">
-                            <div class="subtitle id-color wow fadeInUp mb-3">Luxury</div>
-                            <h2 class="wow fadeInUp">Accomodation</h2>
+                            <div class="owl-single-dots owl-carousel owl-theme">
+                                <div class="item">
+                                    <i class="icofont-quote-left id-color fs-40 mb-4 wow fadeInUp"></i>
+                                    <h3 class="mb-4 wow fadeInUp fs-36">Experience unparalleled luxury and personalized service at Almaris Hotel, where every stay is a journey into sophistication, comfort, and unforgettable memories.</h3>
+                                    <span class="wow fadeInUp">Donette Fondren</span>
+                                </div>
+
+                                <div class="item">
+                                    <i class="icofont-quote-left id-color fs-40 mb-4 wow fadeInUp"></i>
+                                    <h3 class="mb-4 wow fadeInUp fs-36">Experience unparalleled luxury and personalized service at Almaris Hotel, where every stay is a journey into sophistication, comfort, and unforgettable memories.</h3>
+                                    <span class="wow fadeInUp">Donette Fondren</span>
+                                </div>
+
+                                <div class="item">
+                                    <i class="icofont-quote-left id-color fs-40 mb-4 wow fadeInUp"></i>
+                                    <h3 class="mb-4 wow fadeInUp fs-36">Experience unparalleled luxury and personalized service at Almaris Hotel, where every stay is a journey into sophistication, comfort, and unforgettable memories.</h3>
+                                    <span class="wow fadeInUp">Donette Fondren</span>
+                                </div>
+
+                                <div class="item">
+                                    <i class="icofont-quote-left id-color fs-40 mb-4 wow fadeInUp"></i>
+                                    <h3 class="mb-4 wow fadeInUp fs-36">Experience unparalleled luxury and personalized service at Almaris Hotel, where every stay is a journey into sophistication, comfort, and unforgettable memories.</h3>
+                                    <span class="wow fadeInUp">Donette Fondren</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="bg-dark text-light no-top no-bottom overflow-hidden">
-                <div class="container-fluid position-relative half-fluid">
-                  <div class="container">
-                    <div class="row">
-                      <!-- Image -->
-                      <div class="col-lg-6 position-lg-absolute right-half h-100">
-                        <div class="image" data-bgimage="url(images/room/1.webp) center"></div>
-                      </div>
-                      <!-- Text -->
-                      <div class="col-lg-6 py-5 pe-lg-5">
+            <section class="relative bg-light lines-deco">
+                <div class="container-fluid relative z-2">
+                    <div class="row g-4">
+                        <div class="col-lg-8 offset-lg-2 text-center">
+                            <div class="subtitle id-color wow fadeInUp mb-3">Elegant</div>
+                            <h2 class="wow fadeInUp">Accomodation</h2>
+                        </div>
                         
-                            <h3>Standart Room</h3>
-                            <div class="fs-14 mb-3">
-                                <span class="me-4">
-                                    2 Guests
-                                </span>
-                                <span class="me-4">
-                                    30 ft
-                                </span>
-                            </div>
-                            <p class="pe-lg-5">Immerse yourself in the epitome of luxury at Almaris, your premier destination in New York. Our hotel redefines elegance and comfort, offering an exquisite escape for discerning travelers.</p>
-                            <a class="btn-main mt-2" href="room-single.html">View Details</a>
-                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </section>
+                        <div class="col-lg-12">
+                            <div class="owl-custom-nav menu-float px-5" data-target="#room-carousel">
+                                <a class="btn-next"></a>
+                                <a class="btn-prev"></a>                                
 
-            <section class="bg-dark text-light no-top no-bottom overflow-hidden">
-                <div class="container-fluid position-relative half-fluid">
-                  <div class="container">
-                    <div class="row">
-                      <!-- Image -->
-                      <div class="col-lg-6 position-lg-absolute left-half h-100">
-                        <div class="image" data-bgimage="url(images/room/2.webp) center"></div>
-                      </div>
-                      <!-- Text -->
-                      <div class="col-lg-6 offset-lg-6 py-5 ps-lg-5">
-                        
-                            <h3>Deluxe Room</h3>
-                            <div class="fs-14 mb-3">
-                                <span class="me-4">
-                                    2 Guests
-                                </span>
-                                <span class="me-4">
-                                    30 ft
-                                </span>
-                            </div>
-                            <p class="pe-lg-5">Immerse yourself in the epitome of luxury at Almaris, your premier destination in New York. Our hotel redefines elegance and comfort, offering an exquisite escape for discerning travelers.</p>
-                            <a class="btn-main mt-2" href="room-single.html">View Details</a>
-                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </section>
+                                <div id="room-carousel" class="owl-3-cols owl-carousel owl-theme">
+                                    <!-- room begin -->
+                                    <div class="item">
+                                        <div class="hover relative text-light text-center wow fadeInUp" data-wow-delay=".3s">
+                                            <img src="images/1_1.webp" class="w-100 rounded-up-100" alt="">
+                                            <div class="abs hover-op-1 z-4 hover-mt-40 abs-centered">
+                                                <div class="fs-14">From</div>
+                                                <h3 class="fs-40 lh-1 mb-4">$129</h3>
+                                                <a class="btn-line" href="room-single.html">View Details</a>
+                                            </div>
+                                            <div class="abs bg-color z-2 top-0 w-100 h-100 hover-op-1 rounded-up-100"></div>
+                                            <div class="abs z-2 bottom-0 mb-3 w-100 text-center hover-op-0">
+                                                <h3 class="mb-0">Standard Room</h3>
+                                                <div class="text-center fs-14">
+                                                    <span class="mx-2">
+                                                        2 Guests
+                                                    </span>
+                                                    <span class="mx-2">
+                                                        30 ft
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="gradient-trans-color-bottom abs w-100 h-40 bottom-0"></div>
+                                        </div>
+                                    </div>
+                                    <!-- room end -->
+                                                            
+                                    <!-- room begin -->
+                                    <div class="item">
+                                        <div class="hover relative text-light text-center wow fadeInUp" data-wow-delay=".4s">
+                                            <img src="images/2_1.webp" class="w-100 rounded-up-100" alt="">
+                                            <div class="abs hover-op-1 z-4 hover-mt-40 abs-centered">
+                                                <div class="fs-14">From</div>
+                                                <h3 class="fs-40 lh-1 mb-4">$129</h3>
+                                                <a class="btn-line" href="room-single.html">View Details</a>
+                                            </div>
+                                            <div class="abs bg-color z-2 top-0 w-100 h-100 hover-op-1 rounded-up-100"></div>
+                                            <div class="abs z-2 bottom-0 mb-3 w-100 text-center hover-op-0">
+                                                <h3 class="mb-0">Deluxe Room</h3>
+                                                <div class="text-center fs-14">
+                                                    <span class="mx-2">
+                                                        2 Guests
+                                                    </span>
+                                                    <span class="mx-2">
+                                                        35 ft
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="gradient-trans-color-bottom abs w-100 h-40 bottom-0"></div>
+                                        </div>
+                                    </div>
+                                    <!-- room end -->
+                                    
+                                    <!-- room begin -->
+                                    <div class="item">
+                                        <div class="hover relative text-light text-center wow fadeInUp" data-wow-delay=".5s">
+                                            <img src="images/3_1.webp" class="w-100 rounded-up-100" alt="">
+                                            <div class="abs hover-op-1 z-4 hover-mt-40 abs-centered">
+                                                <div class="fs-14">From</div>
+                                                <h3 class="fs-40 lh-1 mb-4">$139</h3>
+                                                <a class="btn-line" href="room-single.html">View Details</a>
+                                            </div>
+                                            <div class="abs bg-color z-2 top-0 w-100 h-100 hover-op-1 rounded-up-100"></div>
+                                            <div class="abs z-2 bottom-0 mb-3 w-100 text-center hover-op-0">
+                                                <h3 class="mb-0">Premier Room</h3>
+                                                <div class="text-center fs-14">
+                                                    <span class="mx-2">
+                                                        2 Guests
+                                                    </span>
+                                                    <span class="mx-2">
+                                                        35 ft
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="gradient-trans-color-bottom abs w-100 h-40 bottom-0"></div>
+                                        </div>
+                                    </div>
+                                    <!-- room end -->
 
-            <section class="bg-dark text-light no-top no-bottom overflow-hidden">
-                <div class="container-fluid position-relative half-fluid">
-                  <div class="container">
-                    <div class="row">
-                      <!-- Image -->
-                      <div class="col-lg-6 position-lg-absolute right-half h-100">
-                        <div class="image" data-bgimage="url(images/room/3.webp) center"></div>
-                      </div>
-                      <!-- Text -->
-                      <div class="col-lg-6 py-5 pe-lg-5">
-                        
-                            <h3>Deluxe Room</h3>
-                            <div class="fs-14 mb-3">
-                                <span class="me-4">
-                                    2 Guests
-                                </span>
-                                <span class="me-4">
-                                    30 ft
-                                </span>
+                                    <!-- room begin -->
+                                    <div class="item">
+                                        <div class="hover relative text-light text-center wow fadeInUp" data-wow-delay=".7s">
+                                            <img src="images/4_1.webp" class="w-100 rounded-up-100" alt="">
+                                            <div class="abs hover-op-1 z-4 hover-mt-40 abs-centered">
+                                                <div class="fs-14">From</div>
+                                                <h3 class="fs-40 lh-1 mb-4">$149</h3>
+                                                <a class="btn-line" href="room-single.html">View Details</a>
+                                            </div>
+                                            <div class="abs bg-color z-2 top-0 w-100 h-100 hover-op-1 rounded-up-100"></div>
+                                            <div class="abs z-2 bottom-0 mb-3 w-100 text-center hover-op-0">
+                                                <h3 class="mb-0">Family Suite</h3>
+                                                <div class="text-center fs-14">
+                                                    <span class="mx-2">
+                                                        4 Guests
+                                                    </span>
+                                                    <span class="mx-2">
+                                                        60 ft
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="gradient-trans-color-bottom abs w-100 h-40 bottom-0"></div>
+                                        </div>
+                                    </div>
+                                    <!-- room end -->
+                                </div>
                             </div>
-                            <p class="pe-lg-5">Immerse yourself in the epitome of luxury at Almaris, your premier destination in New York. Our hotel redefines elegance and comfort, offering an exquisite escape for discerning travelers.</p>
-                            <a class="btn-main mt-2" href="room-single.html">View Details</a>
+                        </div>
                         
-                      </div>
                     </div>
-                  </div>
-                </div>
-            </section>
-
-            <section class="bg-dark text-light no-top no-bottom overflow-hidden">
-                <div class="container-fluid position-relative half-fluid">
-                  <div class="container">
-                    <div class="row">
-                      <!-- Image -->
-                      <div class="col-lg-6 position-lg-absolute left-half h-100">
-                        <div class="image" data-bgimage="url(images/room/4.webp) center"></div>
-                      </div>
-                      <!-- Text -->
-                      <div class="col-lg-6 offset-lg-6 py-5 ps-lg-5">
-                        
-                            <h3>Family Room</h3>
-                            <div class="fs-14 mb-3">
-                                <span class="me-4">
-                                    4 Guests
-                                </span>
-                                <span class="me-4">
-                                    60 ft
-                                </span>
-                            </div>
-                            <p class="pe-lg-5">Immerse yourself in the epitome of luxury at Almaris, your premier destination in New York. Our hotel redefines elegance and comfort, offering an exquisite escape for discerning travelers.</p>
-                            <a class="btn-main mt-2" href="room-single.html">View Details</a>
-                        
-                      </div>
-                    </div>
-                  </div>
                 </div>
             </section>
 
@@ -451,7 +633,7 @@
                             <div class="player wow scaleIn"><span></span></div>
                         </div> 
                         <div class="absolute w-100 h-100 top-0 bg-dark hover-op-05"></div>
-                        <img src="images/2_2.webp" class="img-fluid" alt="">
+                        <img src="images/2_3.webp" class="img-fluid" alt="">
                     </div>
                 </a>
             </section>
@@ -472,7 +654,7 @@
                             <div class="row g-0">
                                 <div class="col-3">
                                     <a href="#" class="d-block hover relative overflow-hidden text-light">
-                                        <img src="images/1_1.webp" class="w-100 hover-scale-1-1" alt="">
+                                        <img src="images/gallery-square/1.webp" class="w-100 hover-scale-1-1" alt="">
                                         <div class="abs abs-centered fs-24 text-white hover-op-0">
                                             <i class="fa-brands fa-instagram"></i>
                                         </div>
@@ -480,7 +662,7 @@
                                 </div>
                                 <div class="col-3">
                                     <a href="#" class="d-block hover relative overflow-hidden text-light">
-                                        <img src="images/2_1.webp" class="w-100 hover-scale-1-1" alt="">
+                                        <img src="images/2_2.webp" class="w-100 hover-scale-1-1" alt="">
                                         <div class="abs abs-centered fs-24 text-white hover-op-0">
                                             <i class="fa-brands fa-instagram"></i>
                                         </div>
@@ -488,7 +670,7 @@
                                 </div>
                                 <div class="col-3">
                                     <a href="#" class="d-block hover relative overflow-hidden text-light">
-                                        <img src="images/3.webp" class="w-100 hover-scale-1-1" alt="">
+                                        <img src="images/3_2.webp" class="w-100 hover-scale-1-1" alt="">
                                         <div class="abs abs-centered fs-24 text-white hover-op-0">
                                             <i class="fa-brands fa-instagram"></i>
                                         </div>
@@ -508,7 +690,7 @@
                             <div class="row g-0">
                                 <div class="col-3">
                                     <a href="#" class="d-block hover relative overflow-hidden text-light">
-                                        <img src="images/5.webp" class="w-100 hover-scale-1-1" alt="">
+                                        <img src="images/gallery-square/5.webp" class="w-100 hover-scale-1-1" alt="">
                                         <div class="abs abs-centered fs-24 text-white hover-op-0">
                                             <i class="fa-brands fa-instagram"></i>
                                         </div>
@@ -516,7 +698,7 @@
                                 </div>
                                 <div class="col-3">
                                     <a href="#" class="d-block hover relative overflow-hidden text-light">
-                                        <img src="images/6_1.webp" class="w-100 hover-scale-1-1" alt="">
+                                        <img src="images/gallery-square/6.webp" class="w-100 hover-scale-1-1" alt="">
                                         <div class="abs abs-centered fs-24 text-white hover-op-0">
                                             <i class="fa-brands fa-instagram"></i>
                                         </div>
@@ -587,7 +769,6 @@
                 </div>
             </div>
         </footer>
-        <!-- footer close -->
     </div>
     
     <!-- Javascript Files
@@ -598,7 +779,6 @@
     <script src="js/custom-marquee.js"></script>
     <script src="js/custom-swiper-2.js"></script>
 
-    <!-- <script src="js/jquery.js"></script> -->
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery.fancybox.js"></script>
     <script src="js/isotope.js"></script>
@@ -621,7 +801,5 @@
       id="mepaas-rewards"
       api-key="y3krjw44aq7kkwixupd0j"
     ></script>
-
-
 
 </body></html>

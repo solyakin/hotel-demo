@@ -338,14 +338,11 @@ if (roomList) {
   roomList.innerHTML = newHtml;
 }
 
-if (email) {
-  window.customerEmail = email;
-}
-
 const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get("id");
 
 if (productId) {
+  window.productId = productId;
   const productTitle = document.getElementById("productTitle");
   const productPrice = document.getElementById("productPrice");
   const productImage = document.getElementById("productImage");

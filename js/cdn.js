@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const scriptTag = document.getElementById("mepaas-rewards");
   const apiKey = scriptTag ? scriptTag?.getAttribute("api-key") : null;
+  const scriptTagProductId = scriptTag?.getAttribute("product-id");
+  const scriptTagCustomerEmail = scriptTag?.getAttribute("customer-email");
   env = scriptTag ? scriptTag?.getAttribute("env") : "dev";
 
   APP_SETTINGS = {
@@ -35,10 +37,10 @@ document.addEventListener("DOMContentLoaded", function () {
         : "https://api.memarketplace.io",
   };
 
-  const productId = scriptTag
+  const productId = scriptTagProductId
     ? scriptTag?.getAttribute("product-id")
     : window.productId;
-  const customerEmail = scriptTag
+  const customerEmail = scriptTagCustomerEmail
     ? scriptTag?.getAttribute("customer-email")
     : window.customerEmail;
 

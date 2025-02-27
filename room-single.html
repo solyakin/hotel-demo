@@ -96,7 +96,8 @@
                         >
                           <a
                             class="btn-main btn-line no-bg mt-lg-4"
-                            href="checkout-page.html"
+                            href="#!"
+                            onclick="handleBookNow()"
                             >Book Now</a
                           >
                         </div>
@@ -400,5 +401,18 @@
       api-key="rdwdkywgorzoop37cqghg"
       env="staging"
     ></script>
+
+    <script>
+      function handleBookNow() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get("id");
+        const email = localStorage.getItem("email");
+        if (email) {
+          window.location.href = "reservation.html?id=" + productId;
+        } else {
+          window.location.href = "login.html";
+        }
+      }
+    </script>
   </body>
 </html>

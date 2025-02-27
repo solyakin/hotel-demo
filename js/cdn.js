@@ -265,13 +265,13 @@ function lightenColor(color, percent) {
 const getOfferDescription = (redeemMethod) => {
   switch (redeemMethod?.type) {
     case "FREE_SHIPPING":
-      return `Get free shipping on this product`;
+      return `Get free shipping on this room`;
     case "FIXED_AMOUNT_OFF":
-      return `Get $${redeemMethod?.discountAmount} off on this product`;
+      return `Get $${redeemMethod?.discountAmount} off on this room`;
     case "VARIABLE_AMOUNT_OFF":
-      return `Get $${redeemMethod?.discountAmount} off on this product`;
+      return `Get $${redeemMethod?.discountAmount} off on this room`;
     case "FIXED_PERCENTAGE_OFF":
-      return `Get ${redeemMethod?.discountPercentage}% off on this product`;
+      return `Get ${redeemMethod?.discountPercentage}% off on this room`;
     default:
       return "";
   }
@@ -333,6 +333,9 @@ const ME_PAAS_CONTAINER_STYLE = `
       right: 0;
       transition: all 0.1s ease;
       opacity: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .me-special-offer-popup:hover #me-offer-popup-close-button {
       opacity: 1;

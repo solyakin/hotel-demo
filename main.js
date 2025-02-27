@@ -130,7 +130,7 @@ const data = [
     productImages: [
       "https://madebydesignesia.com/themes/almaris/images/room/5.webp",
     ],
-    price: 149,
+    price: 169,
     inventory: 12,
     variants: [
       {
@@ -273,13 +273,18 @@ navWrapper.innerHTML = `<header class="transparent has-topbar">
                   </ul>
                 </div>
                 ${
-                  !email &&
-                  `<div class="de-flex-col">
+                  !email
+                    ? `<div class="de-flex-col">
                   <div class="menu_side_area">
                     <a href="login.html" class="btn-main btn-line">Login</a>
                     <span id="menu-btn"></span>
                   </div>
                 </div>`
+                    : `<div class="de-flex-col">
+                                <div class="menu_side_area">          
+                                    <span id="menu-btn"></span>
+                                </div>
+                            </div>`
                 }
               </div>
             </div>
@@ -287,7 +292,7 @@ navWrapper.innerHTML = `<header class="transparent has-topbar">
         </div>
       </header>`;
 
-const roomList = document.querySelector(".room-list");
+const roomList = document.getElementById("roomList");
 
 if (roomList) {
   let newHtml = "";
@@ -295,46 +300,32 @@ if (roomList) {
   for (const e of data) {
     newHtml =
       newHtml +
-      `<div class="col-lg-4 col-md-6">
-                <div class="room-one-block">
-                  <div class="room-one-like"><i class="far fa-heart"></i></div>
-                  <div class="room-one-image img_hover_3">
-                    <img alt="" src="${e.coverImage}" />
+      `<div class="col-lg-4 col-sm-6">
+                <div
+                  class="hover relative text-light text-center wow fadeInUp"
+                  data-wow-delay=".4s"
+                >
+                  <img src="${e.coverImage}" class="img-fluid" alt="" />
+                  <div class="abs hover-op-1 z-4 hover-mt-40 abs-centered">
+                    <div class="fs-14">From</div>
+                    <h3 class="fs-40 lh-1 mb-4">$${e.price}</h3>
+                    <a class="btn-line" href="room-single.html?id=${e.productIdOnBrandSite}">View Details</a>
                   </div>
-                  <div class="room-one-content style-two">
-                    <div class="room-one-info">
-                      ${e.variants[0].name}
-                    </div>
-                    <h4 class="room-one-title">
-                      <a href="/html/room-details"
-                        >
-                        ${e.name}
-                        </a
-                      >
-                    </h4>
-                    <div class="room-one-desc">
-                      ${e.description}
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-6">
-                        <ul class="room-one-info">
-                          <li>Status: <span>Avaialble</span></li>
-                          <li>Deposit: <strong>10% OFF</strong></li>
-                        </ul>
-                      </div>
-                      <div class="col-sm-6">
-                        <ul class="room-one-info">
-                          <li>Bads: <strong>03</strong></li>
-                          <li>Parson: <strong>: 06 - 08</strong></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="room-one-link-btn">
-                      <a class="btn-one s-four" href="/detail.html?id=${e.productIdOnBrandSite}"
-                        >Book Now + <span></span
-                      ></a>
+                  <div
+                    class="abs bg-color z-2 top-0 w-100 h-100 hover-op-1"
+                  ></div>
+                  <div
+                    class="abs z-2 bottom-0 mb-3 w-100 text-center hover-op-0"
+                  >
+                    <h3 class="mb-0">${e.name}</h3>
+                    <div class="text-center fs-14">
+                      <span class="mx-2"> 2 Guests </span>
+                      <span class="mx-2"> 35 ft </span>
                     </div>
                   </div>
+                  <div
+                    class="gradient-trans-color-bottom abs w-100 h-40 bottom-0"
+                  ></div>
                 </div>
               </div>`;
   }
@@ -342,8 +333,34 @@ if (roomList) {
   roomList.innerHTML = newHtml;
 }
 
+const selectRoom = document.getElementById("selectRoom");
+
 const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get("id");
+const apiKey = "rdwdkywgorzoop37cqghg";
+
+if (selectRoom) {
+  let newHtml = "";
+
+  // product with productId should be first item
+  const options = data.filter((e) => e.productIdOnBrandSite !== productId);
+  const product = data.find((e) => e.productIdOnBrandSite === productId);
+
+  const sortedData = [product, ...options];
+
+  for (const e of sortedData) {
+    newHtml =
+      newHtml +
+      `<option
+                          value="${e.productIdOnBrandSite}"
+                          data-src="${e.coverImage}"
+                        >
+                          ${e.name} | $${e.price}/night | 2 Guests
+                        </option>`;
+  }
+
+  selectRoom.innerHTML = newHtml;
+}
 
 if (productId) {
   window.productId = productId;
@@ -353,9 +370,103 @@ if (productId) {
 
   const product = data.find((e) => e.productIdOnBrandSite === productId);
 
-  if (product) {
+  if (product && productTitle && productPrice && productImage) {
     productTitle.innerHTML = product.name;
     productPrice.innerHTML = product.price;
     productImage.src = product.coverImage;
   }
 }
+
+window.handleApplyCode = async () => {
+  const product = data.find((e) => e.productIdOnBrandSite === productId);
+
+  const promoCodeInput = document.getElementById("promoCode");
+  const promoCode = promoCodeInput.value;
+  const promoList = document.getElementById("promoList");
+  const applyButton = document.getElementById("applyButton");
+
+  const originalPrice = product.price;
+
+  if (!productId) {
+    alert("Product ID is missing from the URL.");
+    return;
+  }
+
+  if (!promoCode) {
+    alert("Please enter a promo code.");
+    return;
+  }
+
+  applyButton.disabled = true;
+  applyButton.textContent = "Applying...";
+
+  const payload = {
+    code: promoCode,
+    idOnBrandSite: productId, // Use the extracted idOnBrandSite
+  };
+
+  try {
+    const response = await fetch(
+      "https://api.usemeprotocol.com/order/use-coupon/external",
+      {
+        method: "POST",
+        headers: {
+          accept: "*/*",
+          "x-public-key": apiKey,
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${apiKey}`,
+        },
+        body: JSON.stringify(payload),
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error("Failed to validate the promo code.");
+    }
+
+    const data = await response.json();
+    const redemptionMethod = data?.data?.coupon?.order?.redemptionMethod;
+
+    const discountAmount =
+      redemptionMethod.type === "FIXED_AMOUNT_OFF"
+        ? Number(redemptionMethod?.discountAmount)
+        : redemptionMethod.type === "FIXED_PERCENTAGE_OFF"
+        ? (Number(redemptionMethod?.discountPercentage) / 100) * originalPrice
+        : 0;
+
+    if (discountAmount > 0) {
+      const finalPrice = Math.max(originalPrice - discountAmount, 0); // Ensure no negative prices
+
+      // Apply styles to reflect the discount
+      // originalPriceElement.style.textDecoration = "line-through";
+      // discountedPriceElement.style.display = "inline";
+      // discountedPriceElement.textContent = `$${finalPrice.toFixed(2)}`;
+      // discountAmountElement.textContent = `$${discountAmount.toFixed(2)}`;
+      // totalAmountElement.textContent = `$${finalPrice.toFixed(2)}`;
+
+      promoCodeInput.value = "";
+      const promoListItem = document.createElement("li");
+      promoListItem.innerHTML = `<a href="#">${promoCode} - $${discountAmount.toFixed(
+        2
+      )} off</a>`;
+
+      promoList.appendChild(promoListItem);
+
+      alert("Promo code applied successfully!");
+    } else {
+      throw new Error("Invalid promo code or no discount available.");
+    }
+  } catch (error) {
+    alert(
+      error.message || "An error occurred while validating the promo code."
+    );
+  } finally {
+    applyButton.disabled = false;
+    applyButton.textContent = "Apply Code";
+  }
+};
+
+const handleSubscribe = async (e) => {
+  e.preventDefault();
+  window.location.href = "success.html";
+};

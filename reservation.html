@@ -82,13 +82,7 @@
                 </div>
 
                 <div id="booking_form_wrap">
-                  <form
-                    name="contactForm"
-                    id="booking_form"
-                    class="form-border"
-                    method="get"
-                    action="success.html"
-                  >
+                  <form name="contactForm" id="bookForm" class="form-border">
                     <div class="row">
                       <div class="col-md-12">
                         <h4>Choose Date</h4>
@@ -262,10 +256,11 @@
                       <div class="col-md-12">
                         <p id="submit">
                           <input
-                            type="submit"
+                            type="button"
                             id="send_message"
                             value="Submit Form"
                             class="btn-main"
+                            onclick="confirmOrder()"
                           />
                         </p>
                       </div>

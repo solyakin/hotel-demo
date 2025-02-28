@@ -466,7 +466,55 @@ window.handleApplyCode = async () => {
   }
 };
 
-const handleSubscribe = async (e) => {
-  e.preventDefault();
-  window.location.href = "success.html";
+window.confirmOrder = async () => {
+  const email = localStorage.getItem("email");
+  const product = data.find((e) => e.productIdOnBrandSite === productId);
+  const totalAmount = parseFloat(product.price);
+
+  const payload = {
+    user: {
+      id: `user-${Date.now()}`,
+      email: email,
+      name: email,
+      createdAt: new Date().toISOString(),
+      lastLoginDate: new Date().toISOString(),
+      totalOrders: 5, // Example value
+      totalSpend: 500.75, // Example value
+      totalPoints: 200, // Example value
+      status: "active",
+    },
+    order: {
+      id: `order-${Date.now()}`, // Unique order ID
+      amount: totalAmount, // Use updated amount
+      isExternal: true,
+    },
+    type: "order",
+  };
+
+  try {
+    // Make API call
+    const response = await fetch(
+      "https://paas.usemeprotocol.com/v1/api/earning/brand/event/push",
+      {
+        method: "POST",
+        headers: {
+          accept: "*/*",
+          "x-public-key": apiKey,
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${apiKey}`,
+        },
+        body: JSON.stringify(payload),
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error("Failed to process the order.");
+    }
+
+    const data = await response.json();
+    window.location.href = "success.html";
+  } catch (error) {
+    console.error("Error:", error);
+    alert("An error occurred while processing the order.");
+  }
 };

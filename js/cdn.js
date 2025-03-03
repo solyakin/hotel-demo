@@ -215,7 +215,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <img src="https://tidio-images-messenger.s3.amazonaws.com/syow1wpcd4vnrtfogriakjlqfr3nee0g/images/4b207885-48d2-46f9-abe4-67229ac89423.gif"/>
           <div>
             <h3>${getOfferDescription(offerData)} 🎁</h3>
-            <p>Use your coupon to get a discount on this product. Click on the reward button to get started!</p>
+            <p>Use your coupon to get a discount on this suite. Click on the reward button to get started!</p>
           </div>
         </div>
     `;

@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
       env === "dev"
         ? "https://mepass-rewards-dev.vercel.app"
         : env === "staging"
-        ? "http://localhost:3000"
+        ? "https://mepass-rewards-staging.vercel.app"
         : "https://mepass-rewards.vercel.app",
     paasApiUrl:
       env === "dev"

@@ -12,14 +12,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const scriptTag = document.getElementById("mepaas-rewards");
   const apiKey = scriptTag ? scriptTag?.getAttribute("api-key") : null;
+  const scriptTagProductId = scriptTag?.getAttribute("product-id");
+  const scriptTagCustomerEmail = scriptTag?.getAttribute("customer-email");
   env = scriptTag ? scriptTag?.getAttribute("env") : "dev";
 
   APP_SETTINGS = {
     iframeUrl:
       env === "dev"
-        ? "http://localhost:3000/"
+        ? "https://mepass-rewards-dev.vercel.app"
         : env === "staging"
-        ? "http://localhost:3000/"
+        ? "https://mepass-rewards-staging.vercel.app"
         : "https://mepass-rewards.vercel.app",
     paasApiUrl:
       env === "dev"
@@ -35,10 +37,10 @@ document.addEventListener("DOMContentLoaded", function () {
         : "https://api.memarketplace.io",
   };
 
-  const productId = scriptTag
+  const productId = scriptTagProductId
     ? scriptTag?.getAttribute("product-id")
     : window.productId;
-  const customerEmail = scriptTag
+  const customerEmail = scriptTagCustomerEmail
     ? scriptTag?.getAttribute("customer-email")
     : window.customerEmail;
 
@@ -56,7 +58,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function constructIframeUrl() {
-      return `${APP_SETTINGS.iframeUrl}?apiKey=${apiKey}`;
+      return `${
+        APP_SETTINGS.iframeUrl
+      }?apiKey=${apiKey}${customerEmail ? `&email=${customerEmail}` : ""}${productId ? `&productId=${productId}` : ""}${offerData ? `&offerData=${JSON.stringify(offerData)}` : ""}`;
     }
 
     const brandRes = await fetch(
@@ -148,15 +152,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener("message", function (event) {
       if (event.data.action === "goToSignUp") {
-        window.location.href = "/account/register";
+        window.location.href = "/register.html";
       } else if (event.data.action === "goToSignIn") {
-        window.location.href = "/account/login";
+        window.location.href = "/login.html";
       } else if (event.data.action === "closeModal") {
         closeModal();
       } else if (event.data.action === "openPage") {
         // window.location.href = event.data.url;
         // go to url and also preserve the query params
-        window.location.href = `${event.data.url}${window.location.search}`;
+        window.location.href = `${event.data.url}`;
       }
     });
   }
@@ -263,13 +267,13 @@ function lightenColor(color, percent) {
 const getOfferDescription = (redeemMethod) => {
   switch (redeemMethod?.type) {
     case "FREE_SHIPPING":
-      return `Get free shipping on this product`;
+      return `Get free shipping on this room`;
     case "FIXED_AMOUNT_OFF":
-      return `Get $${redeemMethod?.discountAmount} off on this product`;
+      return `Get $${redeemMethod?.discountAmount} off on this room`;
     case "VARIABLE_AMOUNT_OFF":
-      return `Get $${redeemMethod?.discountAmount} off on this product`;
+      return `Get $${redeemMethod?.discountAmount} off on this room`;
     case "FIXED_PERCENTAGE_OFF":
-      return `Get ${redeemMethod?.discountPercentage}% off on this product`;
+      return `Get ${redeemMethod?.discountPercentage}% off on this room`;
     default:
       return "";
   }
@@ -331,6 +335,9 @@ const ME_PAAS_CONTAINER_STYLE = `
       right: 0;
       transition: all 0.1s ease;
       opacity: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .me-special-offer-popup:hover #me-offer-popup-close-button {
       opacity: 1;

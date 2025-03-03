@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
       env === "dev"
         ? "https://mepass-rewards-dev.vercel.app"
         : env === "staging"
-        ? "https://mepass-rewards-staging.vercel.app"
+        ? "http://localhost:3000"
         : "https://mepass-rewards.vercel.app",
     paasApiUrl:
       env === "dev"
@@ -58,7 +58,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function constructIframeUrl() {
-      return `${APP_SETTINGS.iframeUrl}?apiKey=${apiKey}`;
+      return `${
+        APP_SETTINGS.iframeUrl
+      }?apiKey=${apiKey}${customerEmail ? `&email=${customerEmail}` : ""}${productId ? `&productId=${productId}` : ""}${offerData ? `&offerData=${JSON.stringify(offerData)}` : ""}`;
     }
 
     const brandRes = await fetch(
@@ -158,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
       } else if (event.data.action === "openPage") {
         // window.location.href = event.data.url;
         // go to url and also preserve the query params
-        window.location.href = `${event.data.url}${window.location.search}`;
+        window.location.href = `${event.data.url}`;
       }
     });
   }

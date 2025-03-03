@@ -185,6 +185,192 @@ const data = [
       "https://madebydesignesia.com/themes/almaris/images/room/6.webp",
     productIdOnBrandSite: "ROOM0006",
   },
+  {
+    name: "Capital Suite",
+    description:
+      "Nulla imperdiet ligula est, maximus est sodales Phasellus varius.",
+    productImages: [
+      "https://madebydesignesia.com/themes/almaris/images/room/3.webp",
+    ],
+    price: 209,
+    inventory: 12,
+    variants: [
+      {
+        name: "Suite",
+        isCustom: false,
+        price: 30.0,
+        inventory: 7,
+        description: "Most spacious room option.",
+        imageUrl: ["images/room-3.jpg"],
+        options: [
+          {
+            name: "Amenities",
+            value: "Balcony",
+          },
+        ],
+        variantIdOnBrandSite: "ROOM12347",
+      },
+    ],
+    minAge: 0,
+    coverImage:
+      "https://cdn.prod.website-files.com/609ade7a66f2a080b333dcfa/609ae2437c9ce90186356bbe_Presidential-Suite-p-1080.jpeg",
+    productIdOnBrandSite: "ROOM0007",
+  },
+  {
+    name: "Regatta Suite",
+    description:
+      "Nulla imperdiet ligula est, maximus est sodales Phasellus varius.",
+    productImages: [
+      "https://madebydesignesia.com/themes/almaris/images/room/4.webp",
+    ],
+    price: 239.99,
+    inventory: 12,
+    variants: [
+      {
+        name: "Suite",
+        isCustom: false,
+        price: 30.0,
+        inventory: 7,
+        description: "Most spacious room option.",
+        imageUrl: ["images/room-4.jpg"],
+        options: [
+          {
+            name: "Amenities",
+            value: "Balcony",
+          },
+        ],
+        variantIdOnBrandSite: "ROOM12347",
+      },
+    ],
+    minAge: 0,
+    coverImage:
+      "https://cdn.prod.website-files.com/609ade7a66f2a080b333dcfa/609ae1d87a04beb5bc9dc5a6_Regatta-Suite-p-1080.jpeg",
+    productIdOnBrandSite: "ROOM0008",
+  },
+  {
+    name: "Garden Suite",
+    description:
+      "Nulla imperdiet ligula est, maximus est sodales Phasellus varius.",
+    productImages: [
+      "https://madebydesignesia.com/themes/almaris/images/room/5.webp",
+    ],
+    price: 253.99,
+    inventory: 12,
+    variants: [
+      {
+        name: "Suite",
+        isCustom: false,
+        price: 30.0,
+        inventory: 7,
+        description: "Most spacious room option.",
+        imageUrl: ["images/room-5.jpg"],
+        options: [
+          {
+            name: "Amenities",
+            value: "Balcony",
+          },
+        ],
+        variantIdOnBrandSite: "ROOM12347",
+      },
+    ],
+    minAge: 0,
+    coverImage:
+      "https://cdn.prod.website-files.com/609ade7a66f2a080b333dcfa/609ae100c3bbea3bd839524d_Garden-Suite-p-1600.jpeg",
+    productIdOnBrandSite: "ROOM0009",
+  },
+  {
+    name: "Harbor Suite",
+    description:
+      "Nulla imperdiet ligula est, maximus est sodales Phasellus varius.",
+    productImages: [
+      "https://madebydesignesia.com/themes/almaris/images/room/6.webp",
+    ],
+    price: 299.99,
+    inventory: 12,
+    variants: [
+      {
+        name: "Suite",
+        isCustom: false,
+        price: 30.0,
+        inventory: 7,
+        description: "Most spacious room option.",
+        imageUrl: ["images/room-6.jpg"],
+        options: [
+          {
+            name: "Amenities",
+            value: "Balcony",
+          },
+        ],
+        variantIdOnBrandSite: "ROOM12347",
+      },
+    ],
+    minAge: 0,
+    coverImage:
+      "https://cdn.prod.website-files.com/6632791d47a47296bb7da199/66df0d2980e41bfc39813b80_room-Seattle-Slew.jpg",
+    productIdOnBrandSite: "ROOM0010",
+  },
+  {
+    name: "American Pharaoh Suite",
+    description:
+      "Nulla imperdiet ligula est, maximus est sodales Phasellus varius.",
+    productImages: [
+      "https://madebydesignesia.com/themes/almaris/images/room/6.webp",
+    ],
+    price: 359.99,
+    inventory: 12,
+    variants: [
+      {
+        name: "Suite",
+        isCustom: false,
+        price: 30.0,
+        inventory: 7,
+        description: "Most spacious room option.",
+        imageUrl: ["images/room-6.jpg"],
+        options: [
+          {
+            name: "Amenities",
+            value: "Balcony",
+          },
+        ],
+        variantIdOnBrandSite: "ROOM12347",
+      },
+    ],
+    minAge: 0,
+    coverImage:
+      "https://cdn.prod.website-files.com/6632791d47a47296bb7da199/6679dbb68ce0f295552a278d_room-American%20Pharaoh%20Suite-p-2000.jpg",
+    productIdOnBrandSite: "ROOM0011",
+  },
+  {
+    name: "Count Fleet Suite",
+    description:
+      "Nulla imperdiet ligula est, maximus est sodales Phasellus varius.",
+    productImages: [
+      "https://madebydesignesia.com/themes/almaris/images/room/6.webp",
+    ],
+    price: 399.99,
+    inventory: 12,
+    variants: [
+      {
+        name: "Suite",
+        isCustom: false,
+        price: 30.0,
+        inventory: 7,
+        description: "Most spacious room option.",
+        imageUrl: ["images/room-6.jpg"],
+        options: [
+          {
+            name: "Amenities",
+            value: "Balcony",
+          },
+        ],
+        variantIdOnBrandSite: "ROOM12347",
+      },
+    ],
+    minAge: 0,
+    coverImage:
+      "https://cdn.prod.website-files.com/6632791d47a47296bb7da199/66df0cfc1ccfeb8406e0edf8_room-Count-Fleet.jpg",
+    productIdOnBrandSite: "ROOM0012",
+  },
 ];
 
 const wrapper = document.getElementById("wrapper");

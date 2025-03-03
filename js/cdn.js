@@ -150,9 +150,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener("message", function (event) {
       if (event.data.action === "goToSignUp") {
-        window.location.href = "/account/register";
+        window.location.href = "/register.html";
       } else if (event.data.action === "goToSignIn") {
-        window.location.href = "/account/login";
+        window.location.href = "/login.html";
       } else if (event.data.action === "closeModal") {
         closeModal();
       } else if (event.data.action === "openPage") {
